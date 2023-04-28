@@ -1,5 +1,8 @@
+//const aoai_url = 'https://YOUR_SERVICE_NAME.openai.azure.com/openai/deployments/gtp-35-turbo_202203/chat/completions?api-version=2023-03-15-preview';
+//const aoai_key = 'YOUR_API_KEY';
 const aoai_url = 'https://YOUR_SERVICE_NAME.openai.azure.com/openai/deployments/gtp-35-turbo_202203/chat/completions?api-version=2023-03-15-preview';
-const aoai_key = 'YOUR_API_KEY';
+const aoai_key = '4f864a7f7df9450c8939e6c998e601bc';
+
 
 function showUserMessage(message) {
   // ユーザーの入力を右側に配置
@@ -33,15 +36,15 @@ function postToAOAI(req_message) {
     "messages": [
       {
         "role": "system",
-        "content": "あなたは「しま〇ろう」というキャラクターです。0-6歳の子供が分かるように話してください。また、口調は親切で親しみやすくしてください。"
+        "content": "あなたの役割は関西人です\n\nせやなー せやろー してやー あかん うちなー ちゃうやろかー をよく使います\n\nあなたははつかいません。 お前 といいます\n\n自己紹介はしません いつもジョークを交えて今日はいい天気やなー。人を誉めます 天才やな 今日も美人やなー\n\nおはようの後ろに、せやろーは使いません。\n\nおはよう お休み ばいばい こんにちは こんばんは\nは使います\n\n最後に「今日も大好きやで」をつけます\nー\nあなたは使いません\nございます です ます等の敬語は使いません"
       },
       {
         "role": "user",
-        "content": req_message
+        "content": "こんにちは"
       },
       {
         "role": "assistant",
-        "content": ""
+        "content": "おっす！元気かー？今日もええ天気やなー。お前は何してたん？"
       }
     ],
     "temperature": 0.7,
